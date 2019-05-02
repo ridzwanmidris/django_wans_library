@@ -1,3 +1,4 @@
+from import_export.admin import ImportExportModelAdmin
 from django.contrib import admin
 
 # Register your models here.
@@ -42,6 +43,7 @@ class BooksInstanceInline(admin.TabularInline):
 
 
 @admin.register(Book)
-class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-    inlines = [BooksInstanceInline]
+class BookAdmin(ImportExportModelAdmin):
+    # list_display = ('title', 'author', 'display_genre')
+    # inlines = [BooksInstanceInline]
+    pass
