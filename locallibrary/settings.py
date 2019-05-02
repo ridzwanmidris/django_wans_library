@@ -32,6 +32,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = [
     'gentle-woodland-36741.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
