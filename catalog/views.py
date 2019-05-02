@@ -1,4 +1,4 @@
-from catalog.models import Author
+from models import Author
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 import datetime
@@ -11,7 +11,6 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-from tablib import Dataset
 
 # Create your views here.
 from catalog.models import Book, Author, BookInstance, Genre
