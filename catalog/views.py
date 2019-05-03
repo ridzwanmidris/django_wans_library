@@ -1,4 +1,4 @@
-from models import Author
+from catalog.models import Author
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 import datetime
