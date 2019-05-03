@@ -2,6 +2,7 @@
 Local Library website written in Django
 
 Feel free to add any data within the app.
-Admin ID.
-username: winzard
-password: Johnny@143
+<hr>
+Admin ID.<br>
+username: winzard<br>
+password: Johnny@143<br>
