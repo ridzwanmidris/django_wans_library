@@ -32,8 +32,14 @@ admin.site.register(Author, AuthorAdmin)
 
 
 # Register the Admin classes for BookInstance using the decorator
+class BookInstanceResource(resources.ModelResource):
+    class Meta:
+        model = BookInstance
+
+
 @admin.register(BookInstance)
-class BookInstanceAdmin(admin.ModelAdmin):
+class BookInstanceAdmin(ImportExportModelAdmin):
+    resource_class = BookInstanceResource
     list_filter = ('book', 'status', 'borrower', 'due_back', 'id')
 
     fieldsets = (
@@ -64,7 +70,7 @@ class BookResource(resources.ModelResource):
 
 class BookAdmin(ImportExportModelAdmin):
     resource_class = BookResource
-    list_display = ('title', 'author', 'display_genre')
+    list_display = ('id', 'title', 'author', 'display_genre')
     inlines = [BooksInstanceInline]
 
 
