@@ -22,7 +22,7 @@ class AuthorResource(resources.ModelResource):
 
 class AuthorAdmin(ImportExportModelAdmin):
     resource_class = AuthorResource
-    list_display = ('last_name', 'first_name',
+    list_display = ('id', 'last_name', 'first_name',
                     'date_of_birth', 'date_of_death')
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
 
